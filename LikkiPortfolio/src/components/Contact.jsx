@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { RESUME_DATA } from "../data/resumeData";
 import { 
   Mail, 
-  Phone, 
   Copy, 
   Check, 
   Send, 
@@ -102,31 +101,28 @@ export default function Contact({ onOpenResumeModal, onShowToast }) {
               </div>
             </div>
 
-            {/* Phone Card */}
+            {/* Location Card */}
             <div className="p-5 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-900/50 border border-slate-800 hover:border-purple-500/40 transition-all group">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-xl bg-purple-950/80 border border-purple-500/30 flex items-center justify-center text-purple-400 group-hover:scale-105 transition-transform shrink-0">
-                    <Phone className="w-5 h-5" />
+                    <MapPin className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block">
-                      Phone Number
+                      Location
                     </span>
-                    <a
-                      href={`tel:${RESUME_DATA.personal.phone}`}
-                      className="text-sm sm:text-base font-bold text-white hover:text-purple-300 transition-colors"
-                    >
-                      {RESUME_DATA.personal.phone}
-                    </a>
+                    <span className="text-sm sm:text-base font-bold text-white">
+                      {RESUME_DATA.personal.location}
+                    </span>
                   </div>
                 </div>
                 <button
-                  onClick={() => copyToClipboard(RESUME_DATA.personal.phone, "Phone")}
+                  onClick={() => copyToClipboard(RESUME_DATA.personal.location, "Location")}
                   className="p-2 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
-                  title="Copy phone number to clipboard"
+                  title="Copy location to clipboard"
                 >
-                  {copiedField === "Phone" ? (
+                  {copiedField === "Location" ? (
                     <Check className="w-4 h-4 text-emerald-400" />
                   ) : (
                     <Copy className="w-4 h-4" />

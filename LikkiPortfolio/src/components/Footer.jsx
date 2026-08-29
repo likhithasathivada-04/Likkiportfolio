@@ -1,6 +1,6 @@
 import React from "react";
 import { RESUME_DATA } from "../data/resumeData";
-import { ArrowUp, Download, Heart, Mail, Phone, Sparkles } from "lucide-react";
+import { ArrowUp, Download, Heart, Mail, Sparkles } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 
 export default function Footer() {
@@ -93,9 +93,7 @@ export default function Footer() {
               {RESUME_DATA.personal.email}
             </a>
             <span>•</span>
-            <a href={`tel:${RESUME_DATA.personal.phone}`} className="hover:text-indigo-400 transition-colors">
-              {RESUME_DATA.personal.phone}
-            </a>
+            <span>{RESUME_DATA.personal.location}</span>
           </div>
         </div>
       </div>

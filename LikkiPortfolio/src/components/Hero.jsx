@@ -4,7 +4,6 @@ import {
   Download, 
   ArrowRight, 
   Mail, 
-  Phone, 
   FileText, 
   Sparkles, 
   Code2, 
@@ -166,14 +165,6 @@ CREATE TABLE water_usage_logs (
               >
                 <Mail className="w-3.5 h-3.5 text-indigo-400" />
                 <span>{RESUME_DATA.personal.email}</span>
-              </a>
-              <span className="text-slate-700">•</span>
-              <a
-                href={`tel:${RESUME_DATA.personal.phone}`}
-                className="flex items-center gap-1.5 hover:text-indigo-300 transition-colors"
-              >
-                <Phone className="w-3.5 h-3.5 text-purple-400" />
-                <span>{RESUME_DATA.personal.phone}</span>
               </a>
               <span className="text-slate-700">•</span>
               <a

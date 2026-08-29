@@ -8,7 +8,6 @@ export const RESUME_DATA = {
     profileImage: "/profile.png",
     headline: "Computer Science Student | Java & Full Stack Developer",
     subheadline: "Passionate about building practical software solutions, solving real-world problems, and engineering clean, scalable applications.",
-    phone: "+91 9182237441",
     email: "likhithasathivada@gmail.com",
     github: "https://github.com/likhithasathivada-04",
     linkedin: "https://www.linkedin.com/in/likhitha-sathivada-5918a939b/",

@@ -10,8 +10,7 @@ import {
   CheckCircle, 
   GraduationCap, 
   Briefcase,
-  Mail,
-  Phone
+  Mail
 } from "lucide-react";
 
 export default function About({ onOpenResumeModal }) {
