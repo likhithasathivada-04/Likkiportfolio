@@ -37,7 +37,7 @@ export const RESUME_DATA = {
       },
       {
         title: "Pragmatic Problem Solver",
-        description: "Focused on creating impact through real-world applications in smart water sustainability and healthcare tracking.",
+        description: "Focused on creating impact through practical full-stack and backend applications in healthcare appointment booking and employee management.",
         icon: "Target"
       }
     ]
@@ -143,46 +143,54 @@ export const RESUME_DATA = {
 
   projects: [
     {
-      id: "healthcare-fitness-tracker",
-      title: "Healthcare and Fitness Tracker App",
-      subtitle: "Comprehensive health, nutrition, and biometric tracking mobile web application",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      category: "Healthcare & Wellness",
+      id: "healthcare-appointment-system",
+      title: "Health Care Appointment System",
+      subtitle: "Full-stack web application for booking and managing healthcare appointments",
+      date: "November 2025",
+      technologies: ["Java", "Spring Boot", "MySQL", "HTML", "CSS", "JavaScript"],
+      category: "Healthcare Full Stack",
       githubUrl: "https://github.com/likhithasathivada-04",
       bullets: [
-        "Developing a mobile application that promotes healthy living by tracking fitness activities, nutrition, and personal wellness goals.",
-        "Combines real-time biometric data, personalized activity insights, and preventive health alerts to help users take proactive control of their well-being."
+        "Developed a full-stack web application for booking and managing healthcare appointments.",
+        "Built responsive frontend pages using HTML, CSS, and JavaScript for appointment booking and user interaction.",
+        "Developed RESTful APIs using Spring Boot for user and appointment management.",
+        "Integrated Spring Data JPA with MySQL to implement database persistence and CRUD operations.",
+        "Applied Controller, Service, and Repository layers to maintain a structured and modular backend architecture."
       ],
       highlights: [
-        "Real-time biometric data capture and tracking",
-        "Personalized activity and wellness insights",
-        "Preventive health alert mechanism",
-        "Intuitive mobile-first responsive user interface"
+        "Responsive appointment booking frontend UI",
+        "Spring Boot RESTful APIs for users & appointments",
+        "Spring Data JPA persistence with MySQL",
+        "Modular Controller, Service & Repository layers"
       ],
       color: "from-blue-600/20 via-indigo-600/10 to-transparent",
       borderColor: "border-blue-500/30",
-      accentBadge: "Healthcare Tech"
+      accentBadge: "Full Stack Web App"
     },
     {
-      id: "aquasaver-smart-water",
-      title: "AquaSaver - Smart Water Management & Reporting App",
-      subtitle: "Sustainable water resource monitoring and accountability platform",
-      technologies: ["HTML", "CSS", "JavaScript", "Flask"],
-      category: "Sustainability & Smart Management",
+      id: "employee-management-system",
+      title: "Employee Management System",
+      subtitle: "RESTful backend application for creating, retrieving, updating, and deleting employee records",
+      date: "June 2025",
+      technologies: ["Java", "Spring Boot", "H2", "Spring Data JPA"],
+      category: "Backend Engineering",
       githubUrl: "https://github.com/likhithasathivada-04",
       bullets: [
-        "Successfully implemented a smart water management system, resulting in significant water savings and cost reductions.",
-        "The app builds accountability through usage reporting, helping reduce waste, lower costs, and support sustainable water management."
+        "Developed a RESTful backend application for creating, retrieving, updating, and deleting employee records.",
+        "Designed and implemented REST APIs using Spring Boot to handle employee-related CRUD operations.",
+        "Integrated Spring Data JPA with H2 Database for efficient persistence and management of employee data.",
+        "Implemented request validation and global exception handling to manage invalid inputs and API errors.",
+        "Followed a layered architecture using Controller, Service, and Repository components for maintainable code organization."
       ],
       highlights: [
-        "Smart water usage tracking and monitoring engine",
-        "Automated reporting to build accountability and curb wastage",
-        "Measurable water savings and cost reduction impact",
-        "Full stack integration connecting Flask backend with interactive web UI"
+        "Spring Boot REST APIs for full CRUD operations",
+        "Spring Data JPA with H2 Database persistence",
+        "Request validation & global exception handling",
+        "Layered Controller, Service & Repository architecture"
       ],
       color: "from-cyan-600/20 via-blue-600/10 to-transparent",
       borderColor: "border-cyan-500/30",
-      accentBadge: "Sustainability Tech"
+      accentBadge: "RESTful Backend"
     }
   ],
 

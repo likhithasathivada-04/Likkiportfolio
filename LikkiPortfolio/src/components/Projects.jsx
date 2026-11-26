@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { RESUME_DATA } from "../data/resumeData";
 import { 
   FolderGit2, 
-  Layers, 
   Sparkles, 
   ExternalLink, 
   CheckCircle2, 
   ArrowUpRight, 
-  Activity, 
-  Droplets
+  HeartPulse, 
+  Users
 } from "lucide-react";
 import { GithubIcon } from "./Icons";
 
@@ -16,8 +15,8 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const getProjectIcon = (id) => {
-    if (id.includes("health")) return Activity;
-    return Droplets;
+    if (id.includes("health")) return HeartPulse;
+    return Users;
   };
 
   return (
@@ -34,7 +33,7 @@ export default function Projects() {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed pt-2">
-            Real-world applications engineered to solve practical challenges in healthcare tracking and sustainable water management.
+            Full-stack and RESTful backend applications engineered with Java, Spring Boot, Spring Data JPA, and relational databases.
           </p>
         </div>
 
@@ -55,7 +54,7 @@ export default function Projects() {
                       {project.accentBadge}
                     </span>
                     <span className="text-xs text-slate-400 font-mono">
-                      Project #{index + 1}
+                      {project.date ? project.date : `Project #${index + 1}`}
                     </span>
                   </div>
 

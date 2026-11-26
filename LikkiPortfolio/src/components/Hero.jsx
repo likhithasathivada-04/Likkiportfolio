@@ -22,37 +22,37 @@ export default function Hero({ onOpenResumeModal }) {
   const codeSnippets = {
     java: `// Java & Spring Boot REST Controller
 @RestController
-@RequestMapping("/api/v1/fitness")
-public class FitnessController {
+@RequestMapping("/api/v1/appointments")
+public class AppointmentController {
     
     @Autowired
-    private FitnessTrackerService trackerService;
+    private AppointmentService appointmentService;
 
-    @GetMapping("/biometrics/{userId}")
-    public ResponseEntity<WellnessReport> getBiometrics(
-            @PathVariable Long userId) {
-        WellnessReport report = trackerService.generateInsights(userId);
-        return ResponseEntity.ok(report);
+    @PostMapping("/book")
+    public ResponseEntity<AppointmentResponse> bookAppointment(
+            @Valid @RequestBody AppointmentRequest request) {
+        AppointmentResponse response = appointmentService.book(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 }`,
-    react: `// React.js Metric Insight Component
-export const MetricTracker = ({ userGoals, liveData }) => {
-  const [analytics, setAnalytics] = useState(null);
+    react: `// React.js & Interactive Frontend Component
+export const AppointmentList = ({ appointments, onCancel }) => {
+  const [filterStatus, setFilterStatus] = useState("SCHEDULED");
 
-  useEffect(() => {
-    const report = calculateWellnessScore(liveData);
-    setAnalytics(report);
-  }, [liveData]);
+  const visibleItems = appointments.filter(
+    (item) => item.status === filterStatus
+  );
 
-  return <InsightCard data={analytics} status="active" />;
+  return <AppointmentGrid items={visibleItems} onCancel={onCancel} />;
 };`,
     sql: `-- MySQL Relational Architecture
-CREATE TABLE water_usage_logs (
-    log_id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    zone_identifier VARCHAR(64) NOT NULL,
-    flow_rate_lpm DECIMAL(10, 2) NOT NULL,
-    recorded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    INDEX idx_zone_time (zone_identifier, recorded_at)
+CREATE TABLE appointments (
+    appointment_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    patient_id BIGINT NOT NULL,
+    doctor_name VARCHAR(100) NOT NULL,
+    appointment_time DATETIME NOT NULL,
+    status VARCHAR(32) DEFAULT 'SCHEDULED',
+    INDEX idx_patient_time (patient_id, appointment_time)
 );`
   };
 
